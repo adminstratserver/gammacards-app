@@ -1,0 +1,87 @@
+<!-- ============================================================== -->
+                        <!-- basic form  -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="section-block" id="basicform">
+                                    <h3 class="section-title">Basic Form Elements</h3>
+                                    <p>Use custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+                                </div>
+                                <div class="card">
+                                    <h5 class="card-header">Basic Form</h5>
+                                    <div class="card-body">
+
+
+									   <form class="mt-2" autocomplete="off" method="post">
+                                {% csrf_token %}
+                               {% include 'partials/_messages.html' %}
+
+
+                                <div class="form-group">
+
+                                    <div class="row">
+                                       <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control form-control-sm" placeholder="First Name" name="first_name" required>
+                                        <div class="invalid-feedback">
+                                          Valid first name is required.
+                                        </div>
+                                       </div>
+                                      <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control form-control-sm" placeholder="Last Name" name="last_name" required>
+                                        <div class="invalid-feedback">
+                                          Valid last name is required.
+                                        </div>
+                                      </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                    <input type="email" class="form-control form-control-sm"
+                                        placeholder="Email" name="email" value="{{data.email}}">
+
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control form-control-sm" placeholder="Password" name="password">
+                                </div>
+                                 <div class="form-group">
+                                    <input type="password" class="form-control form-control-sm" placeholder="Confirm Password" name="password2">
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-block btn-sm" value="SignUp" />
+
+                                    <div class="lower my-3 pl-3 pr-3">
+                                    <small class="text-muted">
+                                        By signing up, you agree to our Terms , Data Policy and Cookies Policy .
+                                    </small>
+                                </div>
+                            </form>
+
+
+
+
+								   </div>
+                                    <div class="card-body border-top">
+                                        <h3>Sizing</h3>
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="inputSmall" class="col-form-label">Small</label>
+                                                <input id="inputSmall" type="text" value=".form-control-sm" class="form-control form-control-sm">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputDefault" class="col-form-label">Default</label>
+                                                <input id="inputDefault" type="text" value="Default input" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputLarge" class="col-form-label">Large</label>
+                                                <input id="inputLarge" type="text" value=".form-control-lg" class="form-control form-control-lg">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end basic form  -->
+                        <!-- ============================================================== -->
