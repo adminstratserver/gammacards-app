@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y \
     postgresql-contrib \
     nginx
 
-COPY ./requirements4.txt /usr/src/app/requirements5.txt
+COPY ./requirements5.txt /usr/src/app/requirements5.txt
 RUN pip3 install -r requirements5.txt
 
 # copy project
